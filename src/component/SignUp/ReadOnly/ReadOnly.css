@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+}
+
+.container ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    width: 100%;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+.container ul li {
+    width: 49%;
+}
+
+.container ul li p:first-child{
+    color:#757575;
+}
