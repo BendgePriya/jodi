@@ -1,0 +1,33 @@
+.aboutMeContainer{
+    display: flex;
+    width: 100%; 
+    align-items: center;
+    flex-direction: column ;
+    height:80vh;
+}
+.aboutMeContainer div{
+    width:90%;
+    background-color:white;
+    margin-top:1%;
+    height:40%;
+    padding:0
+}
+.aboutMeContainer label:first-of-type{
+    width: 40%;
+    background-color: #bdbdbd;
+    font-size: 12px;
+    text-align: left
+}
+.aboutMeContainer label{
+    text-align: left;
+    margin-top: 1%;
+}
+.aboutMeContainer button{
+    margin-top: 2%;
+    margin-right: 2%;
+    width:15%;
+    color:white;
+}
+.aboutMeContainer button:hover{
+    transform: scale(1.1,1.1);
+}

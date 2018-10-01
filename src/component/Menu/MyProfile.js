@@ -1,14 +1,9 @@
 import React, { Component } from 'react'
 import { Button, Divider } from '@material-ui/core';
-import * as profile from '../SignUp';
+import * as profile from '../SignUp/Editable';
 import * as ReadOnlyProfile from '../SignUp/ReadOnly'
-// import CriticalFieldsReadOnly from '../SignUp/ReadOnly/CriticleFieldsReadOnly'
-// import BasicDetailsReadOnly from '../SignUp/ReadOnly/BasicDetailsReadOnly'
-// import AboutMeReadOnly from '../SignUp/ReadOnly/AboutMeReadOnly'
-// import EducationAndCareerReadOnly from '../SignUp/ReadOnly/EducationAndCareerReadOnly'
-// import FamilyDetailsReadOnly from '../SignUp/ReadOnly/FamilyDetailsReadOnly'
-// import LifestyleReadOnly from '../SignUp/ReadOnly/LifestyleReadOnly'
-
+import SignUpHeader from '../Header/SignUpHeader'
+import './MyProfile.css'
 class MyProfile extends Component{
     state={
         isCriticleFieldsReadOnly: true,
@@ -24,13 +19,15 @@ class MyProfile extends Component{
     }
     render(){
         return(
-            <div style={{ display:'flex', backgroundColor:'#e0e0e0', paddingBottom:'1%'}}>
+            <div style={{backgroundColor:'#f1f8e9'}}>
+            <SignUpHeader/>
+            <div style={{ display:'flex', paddingBottom:'1%', width:'80%',paddingLeft:'10%'}}>
                 <div style={{ width:'80%', backgroundColor:'white', marginLeft:'1%'}}>
                     <div style={{marginTop:'2%', display:'block'}}>
-                        <label style={{float:'left', paddingLeft:'1%', color:'#ec407a', fontSize:'17px'}}>Critical Fields</label>
+                        <label style={{float:'left', paddingLeft:'1%', color:'#c4001d', fontSize:'17px'}}>Critical Fields</label>
                         <span style={{float:'left', paddingLeft:'0.5%', color:'#757575', fontSize:'14px'}}> - Can be edited only once in lifetime</span>
                         <label 
-                        style={{color:'#ec407a',float:'right', paddingRight:'1%', fontSize:'15px', cursor:'pointer'}}
+                        style={{color:'#c4001d',float:'right', paddingRight:'1%', fontSize:'15px', cursor:'pointer'}}
                         onClick={
                             (event)=> {
                                 this.setState({isCriticleFieldsReadOnly: false})}
@@ -116,43 +113,44 @@ class MyProfile extends Component{
                             : <profile.YourLikes />}
                     </div>
                 </div>
-            <div style={{ margin:' 0 1%', width:'17%', backgroundColor:'white'}}>
+            <div style={{ margin:' 0 1%', width:'20%', backgroundColor:'white'}}>
             <div style={{ marginTop:'8%', display:'block'}}>
-                <label style={{float:'left', paddingLeft:'4%'}}>Contact Details</label>
-                <label 
-                style={{color:'red',float:'right', paddingRight:'4%'}}
-                onClick={
-                    (event)=> {
-                        this.setState({isContactDetailsReadOnly: false})}
-                            }>Edit</label>
-                {(this.state.isContactDetailsReadOnly === true) 
-                            ? <ReadOnlyProfile.ContactDetailsReadOnly />
-                            : <profile.ContactDetails />}
-            </div>
-            <Divider/>
-            <div style={{ marginTop:'8%', display:'block'}}>
-                <label style={{float:'left', paddingLeft:'4%'}}>Horoscope Details</label>
-                <label 
-                style={{color:'red',float:'right', paddingRight:'4%'}}
-                onClick={
-                    (event)=> {
-                        this.setState({isHorosopeDetailsReadOnly: false})}
-                            }>Edit</label>
-                            {(this.state.isHorosopeDetailsReadOnly === true) 
-                            ? <ReadOnlyProfile.HoroscopeDetailsReadOnly />
-                            : <profile.HoroscopeDetails />}
-            </div>
-            <div style={{ marginTop:'8%', display:'block'}}>
-                <label style={{float:'left', paddingLeft:'4%'}}>ID & Address Proof</label>
-                <label 
-                style={{color:'red',float:'right', paddingRight:'4%'}}
-                onClick={
-                    (event)=> {
-                        this.setState({isAddressProofReadOnly: false})}
-                            }>Edit</label>
-                            {(this.state.isAddressProofReadOnly === true) 
-                            ? <ReadOnlyProfile.AddressProofReadOnly />
-                            : <profile.AddressProof />}
+                    <label style={{float:'left', paddingLeft:'4%'}}>Contact Details</label>
+                    <label 
+                    style={{color:'red',float:'right', paddingRight:'4%'}}
+                    onClick={
+                        (event)=> {
+                            this.setState({isContactDetailsReadOnly: false})}
+                                }>Edit</label>
+                    {(this.state.isContactDetailsReadOnly === true) 
+                                ? <ReadOnlyProfile.ContactDetailsReadOnly />
+                                : <profile.ContactDetails />}
+                </div>
+                <Divider/>
+                <div style={{ marginTop:'8%', display:'block'}}>
+                    <label style={{float:'left', paddingLeft:'4%'}}>Horoscope Details</label>
+                    <label 
+                    style={{color:'red',float:'right', paddingRight:'4%'}}
+                    onClick={
+                        (event)=> {
+                            this.setState({isHorosopeDetailsReadOnly: false})}
+                                }>Edit</label>
+                                {(this.state.isHorosopeDetailsReadOnly === true) 
+                                ? <ReadOnlyProfile.HoroscopeDetailsReadOnly />
+                                : <profile.HoroscopeDetails />}
+                </div>
+                <div style={{ marginTop:'8%', display:'block'}}>
+                    <label style={{float:'left', paddingLeft:'4%'}}>ID & Address Proof</label>
+                    <label 
+                    style={{color:'red',float:'right', paddingRight:'4%'}}
+                    onClick={
+                        (event)=> {
+                            this.setState({isAddressProofReadOnly: false})}
+                                }>Edit</label>
+                                {(this.state.isAddressProofReadOnly === true) 
+                                ? <ReadOnlyProfile.AddressProofReadOnly />
+                                : <profile.AddressProof />}
+                </div>
             </div>
             </div>
             </div>

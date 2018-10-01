@@ -4,7 +4,7 @@ import './ReadOnly.css'
 
 export default class BasicDetailsReadOnly extends React.Component {
     state = {
-        fullName:'Parag Mangal',
+        fullName:'ABCD XYZ',
         aadhaar:'Verified',
         height:'31 (26-11-1986)',
         religion:'Un-Married',

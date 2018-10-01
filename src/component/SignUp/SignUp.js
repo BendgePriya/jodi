@@ -1,17 +1,20 @@
 import React from 'react';
 import { Button, TextField, Paper } from '@material-ui/core';
-import Tabs from '../Tabs/SimpleTabs'
+import MenuBar from '../Menu/MenuBar'
 import {
   withRouter
 } from 'react-router-dom'
 
 class SignUp extends React.Component {
   handleRegiser = () => {
-    this.props.history.push('/SimpleTabs');
+    this.props.history.push('/MenuBar');
+  };
+  handleLogin = () => {
+    this.props.history.push('/Login');
   };
   render() {
     return (
-      <div style={{display:'flex', width:'100%', alignItems:'center', flexDirection:'column', backgroundColor:'#f5f5f5', height:'80vh'}}>
+      <div style={{display:'flex', width:'100%', alignItems:'center', flexDirection:'column', backgroundColor:'#f1f8e9', height:'80vh'}}>
             <TextField
               autoFocus
               margin="dense"
@@ -52,7 +55,7 @@ class SignUp extends React.Component {
             </Button>
             <div style={{display:'flex', flexDirection:'row'}}>
             <h4>Already a Member?</h4>&nbsp;&nbsp;
-            <h4 style={{color:'#26c6da'}}>Login</h4>
+            <h4 onClick={this.handleLogin} style={{color:'#26c6da'}}>Login</h4>
             </div>
             </div>
     );

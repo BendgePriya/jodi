@@ -1,0 +1,23 @@
+.basicDetailsContainer{
+    display: flex;
+    width: 100%; 
+    align-items: center;
+    flex-direction: column ;
+    background-color:white;
+}
+
+.basicDetailsContainer div{
+    margin-top:1%;
+    width: 90%;
+}
+
+.basicDetailsContainer button{
+    margin-top: 2%;
+    margin-right: 2%;
+    width:15%;
+    background-color:black;
+    color:white;
+}
+.basicDetailsContainer button:hover{
+    transform: scale(1.1,1.1);
+}

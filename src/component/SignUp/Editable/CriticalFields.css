@@ -1,0 +1,22 @@
+.criticalFieldsContainer{
+    display: flex;
+    width: 100%; 
+    align-items: center;
+    flex-direction: column ;
+    background-color:white;
+}
+
+.criticalFieldsContainer div{
+    margin-top:1%;
+    width: 90%;
+}
+
+.criticalFieldsContainer button{
+    margin-right: 2%;
+    width:15%;
+    background-color:black;
+    color:white;
+}
+.criticalFieldsContainer button:hover{
+    transform: scale(1.1,1.1);
+}

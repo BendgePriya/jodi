@@ -1,0 +1,37 @@
+.myProfileContainer{
+    background-color:'#f1f8e9'
+}
+.myProfileContainer div{
+    display:flex;
+    padding-bottom:1%;
+    width:80%;
+    padding-left:10%;
+}
+.myProfileContainer div div div{
+    width:80%;
+    background-color:white;
+    margin-left:1%;
+}
+.myProfileContainer div div div div{
+    margin-top:2%;
+    display:block;
+}
+.myProfileContainer div div div div label:first-of-type{
+    float:left;
+    padding-left:1%;
+    color:#c4001d;
+    font-size:17px
+}
+.myProfileContainer div div div div span{
+    float:left;
+    padding-left:0.5%;
+    color:#757575;
+    font-size:14px
+}
+.myProfileContainer div div div div label{
+    color:#c4001d;
+    float:right;
+    padding-right:1%;
+    font-size:15px;
+    cursor:pointer;
+}

@@ -1,0 +1,45 @@
+.Menucontainer {
+    display: inline-block;
+    width: 80%;
+    /* align-items: center; */
+    text-align: center;
+    align-content: center;
+    vertical-align: middle;
+    height: 10%;
+    background-color: transparent;
+}
+
+.Menucontainer ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    width: 100%;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+.Menucontainer ul li {
+    color: blue;
+    padding-right: 5%;
+}
+
+.Menucontainer li ul {
+    display: none;
+    position: absolute;
+    top: 1em;
+    left: 0;
+    box-lines: 1px;
+    box-shadow: 1px;
+    border: 3px;
+    border-color: 'red';
+    color: red;
+}
+
+.Menucontainer li > ul {
+    top: auto;
+    left: auto;
+}
+
+.Menucontainer li:hover ul {
+    display: block;
+}
