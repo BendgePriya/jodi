@@ -8,20 +8,22 @@ import MyProfile from './component/Menu/MyProfile'
 import { BrowserRouter, Route } from 'react-router-dom'
 import ForgotPassword from './component/Login/ForgotPassword';
 import Login from './component/Login/LogIn'
+import Search from './component/Search/Search'
 
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
-      <div className="App">
-      <Route path="/" exact component={Layout}></Route>
-      <Route path="/SignUp" component={SignUpLayout}></Route>
-      <Route path="/MenuBar" component={MenuBar}></Route>
-      <Route path="/MyProfile" component={MyProfile}></Route>
-      <Route path="/ForgotPassword" component={ForgotPassword}></Route>
-      <Route path="/Login" component={Login}></Route>
-      </div>
-      </BrowserRouter>    
+       <Search/>
+      // <BrowserRouter>
+      // <div className="App">
+      // <Route path="/" exact component={Layout}></Route>
+      // <Route path="/SignUp" component={SignUpLayout}></Route>
+      // <Route path="/MenuBar" component={MenuBar}></Route>
+      // <Route path="/MyProfile" component={MyProfile}></Route>
+      // <Route path="/ForgotPassword" component={ForgotPassword}></Route>
+      // <Route path="/Login" component={Login}></Route>
+      // </div>
+      // </BrowserRouter>    
     );
   }
 }
